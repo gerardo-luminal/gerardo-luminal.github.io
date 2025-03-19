@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerardo Tapia Cruz - Technical Program Manager</title>
+    <style>
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #004080;
+            --light-color: #f0f8ff;
+            --border-color: #e0e0e0;
+            --text-color: #333;
+            --section-padding: 2rem;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        
+        .header-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            background-color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        section {
+            padding: var(--section-padding);
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        h4 {
+            color: var(--primary-color);
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .project {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background-color: var(--light-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .company {
+            margin-bottom: 3rem;
+        }
+        
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1rem;
+        }
+        
+        .company-date {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-category {
+            background-color: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .skill-list {
+            list-style-type: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .skill-list li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .certifications {
+            margin-top: 1rem;
+        }
+        
+        .cert-item {
+            margin-bottom: 1rem;
+        }
+        
+        .cert-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .cert-link:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-pic">
+
+                </div>
+                <div class="header-text">
+                    <h1>Gerardo Tapia Cruz</h1>
+                    <p>Strategic Technical Program Manager | Data Platforms | Digital Transformation</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/gerardo-tapia-cruz" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                        <a href="https://www.kaggle.com/yourusername" target="_blank">Kaggle</a>
+                        <a href="mailto:gertapia75@gmail.com">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a Strategic Technical Program Manager with a proven track record leading enterprise data platforms, digital transformation, and streaming media initiatives. My expertise lies in driving cross-functional engineering teams, data architecture, and platform optimization across Media & Entertainment and Retail industries.</p>
+            <p>With a strong background in Agile methodologies and data-driven decision making, I have consistently delivered multimillion-dollar cost savings through innovative technical solutions and process improvements. My core strengths include stakeholder management, vendor partnerships, and scalable platform development.</p>
+            <p>Based in Valencia, CA, I bring a unique blend of technical expertise and leadership skills to drive complex projects to successful completion while optimizing resources and delivering measurable business impact.</p>
+        </section>
+        
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            
+            <div class="company">
+                <div class="company-header">
+                    <h3>MotorTrend - Warner Bros. Discovery</h3>
+                    <span class="company-date">July 2021 - Current</span>
+                </div>
+                <p><strong>Technical Program Manager III</strong>, El Segundo, CA</p>
+                
+                <div class="project">
+                    <h4>Project Name: Cross-Functional Data Engineering Initiative</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Led enterprise-wide quarterly planning and prioritization across Data Engineering, Product, QA, and BI teams, managing resources and timelines for 7 platform teams while aligning stakeholder expectations from technical to C-level.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Coordinating multiple teams with competing priorities, managing resources across platforms, and ensuring alignment with business objectives while maintaining technical excellence.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Implemented a structured planning framework with clear KPIs and resource allocation models, creating visibility and accountability across teams.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Successfully aligned 7 platform teams, increased sprint velocity, and improved stakeholder satisfaction through transparent communication and expectation management.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Data-Driven Process Optimization</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Redesigned data-driven processes through "Situation Rooms" methodology to improve ticket resolution and team productivity.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Addressing bottlenecks in ticket resolution, improving team productivity metrics, and creating visibility into development processes.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Created "Situation Rooms" methodology with custom analytics dashboards and improved requirement gathering processes.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Increased ticket resolution speed by 300%, improved team productivity metrics with 50% more story points completed, and achieved 37% higher ticket completion rate.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Vendor Integration & Cost Optimization</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Built strategic relationships with key vendors (mParticle, Amplitude, Snowflake) while managing technical integrations and developing enhancement roadmaps.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Managing multiple vendor relationships, aligning technical requirements, and identifying cost optimization opportunities.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed a vendor management framework with regular reviews, technical integration standards, and cost analysis models.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Achieved $50K in cost savings while improving vendor integrations and enhancing platform capabilities.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Nitrous Heads-Up Display (HUD) System</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Spearheaded design and implementation of innovative Nitrous HUD system providing real-time performance metrics for content optimization.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Creating a real-time data visualization system, integrating multiple data sources, and making insights actionable for editorial teams.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed a custom dashboard system with real-time data feeds, automated alerting, and intuitive visualizations.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Reduced time-to-insight from days to minutes, delivered $45K annual savings, and significantly increased editorial team efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Enterprise Platform Portfolio Management</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Led portfolio of high-complexity initiatives including CDP integration, Snowflake migration, One Identity platform merger, and major product launches.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Managing multiple simultaneous initiatives with interdependencies, resource constraints, and technical complexity.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Implemented portfolio management framework with dependency mapping, risk management, and resource optimization.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Completed CDP integration across 7 platforms ($750K savings, 1500+ tickets), achieved 60% faster processing with Snowflake migration, and successfully launched new products including Car Finder and Next.js website migration.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Data Quality Framework</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Architected data quality framework with Python and Snowflake to reduce data inconsistencies and improve reporting efficiency.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Addressing data quality issues across multiple platforms, creating automated validation processes, and providing real-time KPI visibility.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed Python-based validation pipelines and Snowflake procedures with real-time KPI dashboards.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Reduced data inconsistencies by 75% and accelerated stakeholder reporting from days to minutes.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Strategic Platform Integrations</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Led strategic platform integrations with Warner Bros. Discovery teams (Identity, Privacy, Sonic CMS), managing technical requirements and compliance.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Coordinating integrations across multiple enterprise systems, ensuring compliance with privacy regulations, and managing complex technical requirements.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Created integration framework with standardized APIs, compliance checkpoints, and technical documentation.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Successfully integrated SVOD content, user authentication, and data privacy systems across enterprise platforms with zero compliance issues.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="company">
+                <div class="company-header">
+                    <h3>Sony Pictures Entertainment</h3>
+                    <span class="company-date">June 2016 - July 2021</span>
+                </div>
+                <p><strong>Sr Tech Project Manager</strong>, Culver City, CA</p>
+                
+                <div class="project">
+                    <h4>Project Name: Crackle SVOD Global Expansion</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Orchestrated launch of Crackle SVOD platforms across 17 countries, managing technical integration for 65 affiliates across OTT, TVE, and STB platforms.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Coordinating global launches with diverse technical requirements, ensuring multi-language support, and maintaining security compliance across regions.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed standardized integration framework with region-specific adaptations, automated testing suites, and compliance verification processes.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Successfully launched in 17 countries with 65 affiliate integrations, achieving all timeline targets and security compliance requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: VOD Operations Optimization</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Led optimization of VOD operations through data-driven analysis, resulting in centralized content delivery hub for 7 regions.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Standardizing content delivery across diverse regions, improving operational efficiency, and reducing delivery times.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Implemented Agile methodologies and automated workflows for content delivery across LATAM, Brazil, UK, Iberia, Central Europe, Germany, and USA.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Reduced delivery time by 40% and improved team velocity by 35% through centralized operations and process automation.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Real-Time Content Monitoring System</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Designed and implemented real-time content publication monitoring system with automated checkpoints and KPI dashboards.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Creating visibility into content publication processes, identifying bottlenecks, and measuring operational efficiency.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed automated monitoring system with real-time checkpoints, alerts, and KPI visualization dashboards.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Increased operational efficiency by 35% through improved visibility and proactive issue resolution.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: QA Team Development and Workflow Optimization</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Built and led QA team in Mexico, implementing Agile methodologies and Jira workflows to improve content certification processes.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Establishing new QA team, creating standardized processes, and improving certification efficiency while maintaining accuracy.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Implemented Agile methodologies with customized Jira workflows, automated testing frameworks, and performance metrics.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Improved content certification speed by 50% while maintaining 99.9% accuracy.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Security Workflow for Affiliate Integration</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Developed scalable security workflows for affiliate platform integration, enabling secure content delivery across multiple distribution channels.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Ensuring content security across diverse platforms, standardizing security protocols, and maintaining compliance with industry standards.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Created security framework with automated compliance checks, standardized integration protocols, and monitoring systems.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Achieved zero security incidents while expanding to multiple distribution channels and affiliate platforms.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="company">
+                <div class="company-header">
+                    <h3>Sears Operadora de Mexico</h3>
+                    <span class="company-date">November 2009 - June 2016</span>
+                </div>
+                <p><strong>Head of IT Merchandise</strong>, Mexico City, MX</p>
+                
+                <div class="project">
+                    <h4>Project Name: Enterprise Purchasing Platform</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Architected, implemented, and deployed enterprise purchasing platform serving 500+ users with automated workflows.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Building scalable platform for large user base, automating complex purchasing workflows, and integrating with existing systems.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed custom platform with automated approval workflows, inventory integration, and user-friendly interfaces.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Reduced processing time by 40% and improved user satisfaction across 500+ users.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Legacy System Integration Framework</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Designed integration framework connecting legacy systems with modern platforms, enabling real-time inventory tracking and automated vendor management.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Integrating diverse legacy systems, creating real-time data synchronization, and maintaining system performance across 100+ stores.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed middleware integration layer with standardized APIs, data transformation services, and monitoring capabilities.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Achieved real-time inventory visibility and automated vendor management across 100+ stores, improving operational efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Scalable Supply Chain Solution</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Developed scalable supply chain solution supporting 200+ vendors, optimizing partner onboarding and transaction processing.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Managing diverse vendor requirements, streamlining onboarding processes, and reducing transaction processing costs.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Created standardized vendor integration platform with automated onboarding workflows and optimized transaction processing.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Achieved faster partner onboarding and 45% reduction in transaction processing costs across 200+ vendors.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Digital Strategy and Process Automation</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Collaborated with C-level executives to define digital strategy and ROI-driven solutions for business optimization.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Aligning technical capabilities with business objectives, identifying high-impact automation opportunities, and measuring ROI.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed strategic roadmap with prioritized automation initiatives, clear ROI metrics, and implementation timelines.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Delivered annual cost savings through process automation and system optimization, with measurable business impact.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="company">
+                <div class="company-header">
+                    <h3>Soporte Tecnico en Sistemas</h3>
+                    <span class="company-date">June 2005 - November 2011</span>
+                </div>
+                <p><strong>Sr IT Consultant</strong>, Mexico City, MX</p>
+                
+                <div class="project">
+                    <h4>Project Name: Centralized Retail Web Platform</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Designed and implemented centralized web platform integrating 6 disparate legacy systems for 18 retail stores.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Integrating multiple legacy systems, enabling real-time data synchronization, and reducing operational costs.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed centralized platform with standardized APIs, data transformation services, and user-friendly interfaces.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Enabled real-time data synchronization across 18 retail stores and reduced operational costs by 35%.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: TV Ad Sales Platform for Azteca</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Led digital transformation for TV ad sales platform at Azteca, automating inventory management and billing processes.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Modernizing legacy ad sales systems, automating complex inventory management, and streamlining billing processes.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed digital platform with automated inventory management, real-time availability tracking, and integrated billing systems.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Achieved 25% revenue growth through improved inventory utilization and streamlined sales processes.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Enterprise Platform Development</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Managed development of enterprise platforms and marketing initiatives for major clients (Scotia Bank, ANTAD, Zurich, Sony).</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Managing diverse client requirements, coordinating multiple simultaneous projects, and ensuring high-quality deliverables.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Implemented standardized development framework with client-specific customizations, quality assurance processes, and project management methodologies.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Delivered 12 successful launches with average 40% improvement in user engagement across client platforms.</p>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <h4>Project Name: Data-Driven Project Governance</h4>
+                    <div>
+                        <strong>Project Overview:</strong>
+                        <p>Established data-driven project governance framework to improve project delivery and stakeholder satisfaction.</p>
+                    </div>
+                    <div>
+                        <strong>Challenges & Complexity:</strong>
+                        <p>Creating visibility into project progress, standardizing governance processes, and improving delivery metrics.</p>
+                    </div>
+                    <div>
+                        <strong>Innovation & Solution:</strong>
+                        <p>Developed governance framework with KPI dashboards, standardized reporting, and regular review processes.</p>
+                    </div>
+                    <div>
+                        <strong>Impact & Achievements:</strong>
+                        <p>Improved project delivery time by 30% while maintaining 98% stakeholder satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Program Management & Leadership</h3>
+                    <ul class="skill-list">
+                        <li>Program Management</li>
+                        <li>Data Platforms</li>
+                        <li>Cross-functional Team Leadership</li>
+                        <li>Stakeholder Management</li>
+                        <li>Change Management</li>
+                        <li>Process Optimization</li>
+                        <li>Risk Management</li>
+                        <li>Vendor Management</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Technical Expertise</h3>
+                    <ul class="skill-list">
+                        <li>Data Engineering</li>
+                        <li>Technical Architecture</li>
+                        <li>Data Analytics</li>
+                        <li>AI/Machine Learning</li>
+                        <li>Platform Integration</li>
+                        <li>Business Intelligence</li>
+                        <li>Cloud Computing</li>
+                        <li>Security & Compliance</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <ul class="skill-list">
+                        <li>Agile / Hybrid Methodologies</li>
+                        <li>Scrum</li>
+                        <li>MS-Project</li>
+                        <li>Smartsheet</li>
+                        <li>Jira / Confluence</li>
+                        <li>Notion</li>
+                        <li>Snowflake</li
